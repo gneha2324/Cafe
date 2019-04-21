@@ -1,0 +1,76 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+char name[15];
+class cafe
+{
+int ph;
+public:
+int n1,n2,t3,t4,t5,t6;
+void get_data()
+{
+cout<<"enter your name" <<endl;
+cin>>name;
+cout<<"enter your phone no: "<<endl;
+cin>>ph;
+}
+void enter()
+{
+cout<<"Welcome " <<name<<" to GOYAL'S cafe"<<endl;
+cout<<"I hope you like it";
+}
+
+};
+void main()
+{
+clrscr();
+int n;
+cafe c;
+c.get_data();
+c.enter();
+
+c.t3=0;
+c.t4=0;
+L:cout<<endl<<"Menu for the cafe";
+  cout<<endl<<"1.Pizza \t RS.180";
+  cout<<endl<<"2.Burger \t RS. 50";
+  cout<<endl<<"3. No Choice";
+
+M:cout<<endl<< "Enter your choice: ";
+  cin>>n;
+switch(n)
+{
+case 1: c.t3=0;
+	c.n1=0;
+	cout<<"Enter the quantity:  ";
+	cin>>(c.n1);
+	c.t3=(c.t3)+((c.n1)*180);
+	cout<<endl<<"Anything you want to eat.Then enter your choice";
+	goto M;
+
+
+case 2:   c.t4=0;
+	  c.n2=0;
+	  cout<<"Enter the quantity:  ";
+	  cin>>(c.n2);
+	  c.t4=(c.t4)+((c.n2)*50);
+	  cout<<endl<<"Anything you want to eat.Then enter your choice";
+	  goto M;
+
+case 3: cout<<endl<<" Here's ur order is";
+
+	break;
+default:
+	cout<<endl<<"Thanks for coming to my cafe";
+	exit(0);
+}
+
+c.t5=((c.t3)+(c.t4));
+cout<<endl<<"bill is: "<<(c.t5);
+cout<<endl<<"Thanks " << name<<" for eating in my cafe";
+ getch();
+}
+
+
+
+
